@@ -39,7 +39,7 @@ router.patch('/environment', (req, res) => {
     //let us verify scenarios after changing the env variable -- 
     verifyScenarios();
 
-    res.json(environment)
+    res.status(200).json(environment)
 })
 
 
@@ -93,7 +93,7 @@ router.post('/rover/move', (req, res) => {
 
 
 router.get('/rover/status', (req, res) => {
-    res.json(getRoverStatus())
+    res.status(200).json(getRoverStatus())
 })
 
 module.exports = router
