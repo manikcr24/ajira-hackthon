@@ -61,7 +61,7 @@ router.post('/rover/move', (req, res) => {
     let roverBattery = roverCfg['initial-battery']
 
     // check if battery is down
-    if(roverBattery <= 9) {
+    if(roverBattery <= 0) {
         return res.sendStatus(503)
     }
     
